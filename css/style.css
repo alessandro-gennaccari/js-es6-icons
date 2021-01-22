@@ -9,12 +9,12 @@ body {
 }
 
 header {
-    height: 80px;
     padding: 20px;
     background-color: white;
 }
 
 header .logo {
+    height: 70px;
     padding: 0 25px;
     color: teal;
     font-size: 350%;
@@ -42,4 +42,30 @@ header .search select {
     text-align: center;
     border-radius: 5px;
     background-color: teal;
+}
+
+main {
+    padding: 20px;
+}
+
+main .icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+main .icons .icon {
+    flex-basis: calc(100% / 5 - 60px);
+    padding: 15px 0;
+    margin: 30px;
+    background-color: lightgrey;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0,0.5);
+}
+
+main .icons .icon i {
+    font-size: 30px;
+    margin-bottom: 8px;
 }
