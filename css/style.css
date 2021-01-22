@@ -35,6 +35,7 @@ header .search {
 }
 
 header .search select {
+    width: 100px;
     margin-left: 20px;
     appearance: none;
     cursor: pointer;
@@ -44,6 +45,11 @@ header .search select {
     text-align: center;
     border-radius: 5px;
     background-color: teal;
+    text-transform: uppercase;
+}
+
+header .search select:hover{
+    background-color: rgb(112, 112, 112);
 }
 
 main {
