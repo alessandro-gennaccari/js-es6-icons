@@ -130,4 +130,19 @@ $(document).ready(function(){
         }
     });
     console.log(iconsAddColor);
+
+    // Ciclo tutto l'array di oggetti,destrutturo ciò che andro poi a stampare col tamplate
+    iconsAddColor.forEach((element) => {
+        const {name,prefix,color,family} = element;
+        $('.icons').append(
+            `
+            <div class="icon">
+                <i class="${family} ${prefix}${name}" style="color:${color}"></i>
+                <div class="icon-name">${name}</div>
+            </div>
+            `
+        );
+    });
+
+
 });
