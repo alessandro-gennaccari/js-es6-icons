@@ -119,4 +119,15 @@ $(document).ready(function(){
     // In base al risultato ottenuto, mi creo un array con i colori che vorrò associare
     const color = ['blue','orange','purple'];
 
+    const iconsAddColor = icons.map((element) => {
+        // Controllo in quale indice si riconosce il type di ogni singolo oggetto, rispetto all'array dei vari tipi esistenti
+        const indexIconsType = types.indexOf(element.type);
+        // E mi faccio ritornare un nuovo array di oggetti (modifico quello iniziale)
+        // Aggiungendo i miei colori in base all'indice, sapedo di aver gia creato l'array color con i dovuti accorgiementi
+        return {
+            ...element,
+            color: color[indexIconsType]
+        }
+    });
+    console.log(iconsAddColor);
 });
