@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    height: 100vh;
 }
+
 
 header {
     padding: 20px;
@@ -17,11 +17,14 @@ header {
 header .logo {
     height: 70px;
     padding: 0 25px;
-    color: teal;
     font-size: 350%;
     font-family: 'Acme', sans-serif;
 }
 
+header a {
+   text-decoration: none;
+   color: teal;
+}
 header .search {
     background-color: teal;
     border-radius: 5px;
@@ -46,6 +49,7 @@ header .search select {
     border-radius: 5px;
     background-color: teal;
     text-transform: uppercase;
+    font-weight: bolder;
 }
 
 header .search select:hover{
@@ -54,6 +58,7 @@ header .search select:hover{
 
 main {
     padding: 0 20px 20px;
+    margin-right: 20px;
 }
 
 main .icons {
@@ -64,16 +69,42 @@ main .icons {
 }
 
 main .icons .icon {
-    flex-basis: calc(100% / 5 - 60px);
-    padding: 15px 0;
-    margin: 30px;
-    background-color: lightgrey;
+    flex-basis: calc(100% / 5 - 100px);
+    padding: 20px 0;
+    margin: 50px;
+    background-color: #bdecc9;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0,0.5);
+    box-shadow: 2px 2px 1px #244e4b9b;
+}
+
+main .icons .icon:hover {
+    background-color: #5dcac19b;
+    cursor: pointer;
 }
 
 main .icons .icon i {
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 8px;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    main .icons .icon {
+        flex-basis: calc(100% / 4 - 100px);
+    }
+  }
+@media screen and (min-width: 768px) and (max-width: 992px){
+    main .icons .icon {
+        flex-basis: calc(100% / 3 - 100px);
+    }
+  }
+@media screen and (min-width: 576px) and (max-width: 768px){
+    main .icons .icon {
+        flex-basis: calc(100% / 2 - 100px);
+    }
+  }
+@media screen and (max-width: 576px){
+    main .icons .icon {
+        flex-basis: calc(100% / 1 - 100px);
+    }
+  }
